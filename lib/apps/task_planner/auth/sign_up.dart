@@ -1,6 +1,7 @@
+import 'package:complete_ui_kit/apps/task_planner/auth/sign_in.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 import 'package:complete_ui_kit/config/global_style.dart';
-import 'package:complete_ui_kit/task_planner/auth/sign_in.dart';
+
 import 'package:flutter/material.dart';
 
 class SignUpTaskPlanner extends StatefulWidget {

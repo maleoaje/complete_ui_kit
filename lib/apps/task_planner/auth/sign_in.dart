@@ -1,7 +1,8 @@
+import 'package:complete_ui_kit/apps/task_planner/auth/forgot_password.dart';
+import 'package:complete_ui_kit/apps/task_planner/auth/sign_up.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 import 'package:complete_ui_kit/config/global_style.dart';
-import 'package:complete_ui_kit/task_planner/auth/forgot_password.dart';
-import 'package:complete_ui_kit/task_planner/auth/sign_up.dart';
+
 import 'package:flutter/material.dart';
 
 class LogInTaskApp extends StatefulWidget {

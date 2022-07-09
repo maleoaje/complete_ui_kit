@@ -1,8 +1,9 @@
-import 'package:complete_ui_kit/bookmark_app/bottom_nav_bar.dart';
+import 'package:complete_ui_kit/apps/bookmark_app/bottom_nav_bar.dart';
+import 'package:complete_ui_kit/apps/task_planner/auth/sign_up.dart';
+
 import 'package:complete_ui_kit/config/constants.dart';
 import 'package:complete_ui_kit/config/global_style.dart';
 
-import 'package:complete_ui_kit/task_planner/auth/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
