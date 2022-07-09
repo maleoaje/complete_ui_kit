@@ -1,5 +1,7 @@
+import 'package:complete_ui_kit/bookmark_app/bottom_nav_bar.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 import 'package:complete_ui_kit/config/global_style.dart';
+
 import 'package:complete_ui_kit/task_planner/auth/sign_up.dart';
 import 'package:flutter/material.dart';
 
@@ -22,25 +24,32 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 40, 0, 40),
                 child: Center(
-                    child: Text(
-                  "COMPLETE UI KIT",
-                  style: GlobalStyle.headerStyle,
-                )),
+                  child: Text(
+                    "COMPLETE UI KIT",
+                    style: GlobalStyle.headerStyle,
+                  ),
+                ),
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const SignUpTaskPlanner()));
                 },
-                child: _buildAppViewCard(
-                    "assets/plannericon.png", "Task Planner UI Kit"),
+                child: _buildAppViewCard(Icons.task, "Task Planner UI Kit"),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const BottomNavBarBookmarkApp()));
+                },
+                child: _buildAppViewCard(Icons.bookmark, "Bookmark App UI Kit"),
               ),
             ],
           ),
         ));
   }
 
-  Widget _buildAppViewCard(String appImage, String title) {
+  Widget _buildAppViewCard(IconData appIcon, String title) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
       child: Container(
@@ -69,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   children: [
                     CircleAvatar(
-                      backgroundImage: AssetImage(appImage),
+                      child: Icon(appIcon),
                     ),
                     const SizedBox(
                       width: 20,
