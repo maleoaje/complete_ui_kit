@@ -1,17 +1,17 @@
+import 'package:complete_ui_kit/apps/task_planner/auth/sign_in.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 import 'package:complete_ui_kit/config/global_style.dart';
-import 'package:complete_ui_kit/task_planner/auth/forgot_password.dart';
-import 'package:complete_ui_kit/task_planner/auth/sign_up.dart';
+
 import 'package:flutter/material.dart';
 
-class LogInTaskApp extends StatefulWidget {
-  const LogInTaskApp({Key? key}) : super(key: key);
+class SignUpTaskPlanner extends StatefulWidget {
+  const SignUpTaskPlanner({Key? key}) : super(key: key);
 
   @override
-  State<LogInTaskApp> createState() => _LogInTaskAppState();
+  State<SignUpTaskPlanner> createState() => _SignUpTaskPlannerState();
 }
 
-class _LogInTaskAppState extends State<LogInTaskApp> {
+class _SignUpTaskPlannerState extends State<SignUpTaskPlanner> {
   final TextEditingController _etName = TextEditingController();
   final TextEditingController _etEmail = TextEditingController();
   final TextEditingController _etPass = TextEditingController();
@@ -47,18 +47,56 @@ class _LogInTaskAppState extends State<LogInTaskApp> {
               height: 25,
             ),
             Text(
-              "Log In.",
+              "Create An Account.",
               style: GlobalStyle.taskAppTitleStyle,
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
-              "Sign in to your account",
+              "Sign up to continue",
               style: GlobalStyle.dimText,
             ),
             const SizedBox(
               height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+              child: TextFormField(
+                validator: (value) {
+                  if (value!.isEmpty) return "Enter Name";
+                  return null;
+                },
+                textInputAction: TextInputAction.next,
+                cursorColor: taskAppBlue,
+                textAlign: TextAlign.start,
+                keyboardType: TextInputType.emailAddress,
+                controller: _etName,
+                style: TextStyle(color: taskAppBlue, fontSize: 14),
+                decoration: InputDecoration(
+                  // Enabled Border
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: dimGrey, width: 0.1),
+                  ),
+                  // Focused Border
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: dimGrey, width: 0.2),
+                  ),
+                  // Error Border
+                  errorBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: dimGrey, width: 0.1),
+                  ),
+                  // Focused Error Border
+                  focusedErrorBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: dimGrey, width: 0.2),
+                  ),
+                  fillColor: const Color.fromARGB(255, 226, 225, 225),
+                  // focusedBorder: const UnderlineInputBorder(),
+                  // enabledBorder: const UnderlineInputBorder(),
+                  hintText: 'Name',
+                  hintStyle: GlobalStyle.dimTextInputText,
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
@@ -161,7 +199,7 @@ class _LogInTaskAppState extends State<LogInTaskApp> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Log in',
+                      'Create an account',
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -173,40 +211,22 @@ class _LogInTaskAppState extends State<LogInTaskApp> {
               ),
             ),
             const SizedBox(
-              height: 15,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const ForgotPasswordTaskApp()));
-                  },
-                  child: Text(
-                    " Forgot Password",
-                    style: GlobalStyle.dimText,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
               height: 25,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have an account?",
+                  "Already have an account?",
                   style: GlobalStyle.normalText,
                 ),
                 InkWell(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const SignUpTaskPlanner()));
+                        builder: (context) => const LogInTaskApp()));
                   },
                   child: Text(
-                    " Sign Up.",
+                    " Login.",
                     style: GlobalStyle.taskAppNormalText,
                   ),
                 ),
