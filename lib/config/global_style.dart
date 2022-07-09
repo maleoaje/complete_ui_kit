@@ -21,4 +21,7 @@ class GlobalStyle {
 
   static TextStyle taskAppNormalText =
       TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: taskAppBlue);
+
+  static TextStyle bottonAppBarStyle =
+      TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: taskAppBlue);
 }

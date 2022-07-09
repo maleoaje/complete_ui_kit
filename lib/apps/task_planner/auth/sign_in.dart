@@ -1,5 +1,6 @@
 import 'package:complete_ui_kit/apps/task_planner/auth/forgot_password.dart';
 import 'package:complete_ui_kit/apps/task_planner/auth/sign_up.dart';
+import 'package:complete_ui_kit/apps/task_planner/bottom_nav_bar.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 import 'package:complete_ui_kit/config/global_style.dart';
 
@@ -155,7 +156,10 @@ class _LogInTaskAppState extends State<LogInTaskApp> {
                   borderRadius: BorderRadius.circular(8),
                 )),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const BottomNavBarTaskPlanner()));
+              },
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(50, 6, 50, 6),
                 child: Row(
