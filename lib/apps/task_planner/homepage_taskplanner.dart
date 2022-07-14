@@ -1,3 +1,4 @@
+import 'package:complete_ui_kit/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomePageTaskPlanner extends StatefulWidget {
@@ -10,6 +11,8 @@ class HomePageTaskPlanner extends StatefulWidget {
 class _HomePageTaskPlannerState extends State<HomePageTaskPlanner> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      backgroundColor: white,
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:complete_ui_kit/apps/task_planner/homepage_taskplanner.dart';
+import 'package:complete_ui_kit/apps/task_planner/taskplanner_Inbox.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class _BottomNavBarTaskPlannerState extends State<BottomNavBarTaskPlanner> {
   List<Widget> widgets = [
     const HomePageTaskPlanner(),
     const HomePageTaskPlanner(),
-    const HomePageTaskPlanner(),
+    TaskPlannerInbox(),
     const HomePageTaskPlanner(),
   ];
   @override
