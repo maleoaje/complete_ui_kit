@@ -137,7 +137,7 @@ class _BottomNavBarTaskPlannerState extends State<BottomNavBarTaskPlanner> {
                                 );
                               },
                               icon: Icon(
-                                LineIcons.clock,
+                                LineIcons.tools,
                                 size: 30,
                                 color: currentState == 3 ? taskAppBlue : grey,
                               ),

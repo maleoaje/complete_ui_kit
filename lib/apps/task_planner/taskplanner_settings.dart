@@ -38,34 +38,48 @@ class _TaskPlannerSettingsState extends State<TaskPlannerSettings> {
           child: Icon(Icons.more_horiz_rounded, color: taskAppBlue,),
         ),],
       ),
-      body: ListView(
-        children: const [
-          
-        ],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+        child: ListView(
+          children:  [
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: _settingsCard(Icons.security_rounded,  'Security & Privacy', '11-07-2022', Colors.orange.withOpacity(0.1), orange),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: _settingsCard(Icons.mail_outlined,  'Messages', '11-07-2022', Colors.blue.withOpacity(0.1), blue),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: _settingsCard(Icons.music_video,  'Media', '11-07-2022', Colors.purple.withOpacity(0.1), Colors.purple),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: _settingsCard(Icons.theater_comedy,  'Theme Customizatuion', '11-07-2022', Colors.indigo.withOpacity(0.1), Colors.indigo),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: _settingsCard(Icons.help,  'Help', '11-07-2022', Colors.indigo.withOpacity(0.1), Colors.indigo),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: _settingsCard(Icons.privacy_tip,  'Privacy', '11-07-2022', Colors.pink.withOpacity(0.1), Colors.pink),
+            ),
+          ],
+        ),
       )
     );
   }
 
-  Widget _buildAppViewCard(IconData appIcon, title, date) {
+  Widget _settingsCard(IconData appIcon, title, date,Color iconContainer, iconColor) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
       child: Container(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: white,
-            borderRadius: const BorderRadius.only(
-              topRight: Radius.circular(20),
-              bottomRight: Radius.circular(20),
-              topLeft: Radius.circular(5),
-              bottomLeft: Radius.circular(5),
             ),
-            boxShadow: [
-              BoxShadow(
-                  color: black.withOpacity(0.1),
-                  spreadRadius: 0 / 8,
-                  blurRadius: 20,
-                  offset: const Offset(0, 0.1)),
-            ]),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -74,22 +88,35 @@ class _TaskPlannerSettingsState extends State<TaskPlannerSettings> {
               children: [
                 Row(
                   children: [
-                    CircleAvatar(
-                      child: Icon(appIcon),
-                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: iconContainer),
+                      child: Icon(appIcon, color: iconColor,)),
                     const SizedBox(
                       width: 20,
                     ),
-                    Text(
-                      title,
-                      style: GlobalStyle.appTitleStyle,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: GlobalStyle.appTitleStyle,
+                        ),
+                        const SizedBox(height: 8,),
+                        Text(
+                          date,
+                          style: GlobalStyle.dimText,
+                        ),
+                      ],
                     )
                   ],
                 ),
                 Icon(
                   Icons.arrow_right_rounded,
                   size: 35,
-                  color: bgColor,
+                  color: taskAppBlue,
                 )
               ],
             ),
