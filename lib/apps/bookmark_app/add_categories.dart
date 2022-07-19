@@ -16,7 +16,7 @@ class _AddPageState extends State<AddPage> {
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(20, 25, 20, 20),
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               color: blue,
             ),
             child: Column(

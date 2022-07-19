@@ -12,7 +12,7 @@ class GlobalStyle {
   static TextStyle taskAppTitleStyle =
       TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: taskAppBlue);
   static TextStyle dimText =
-      TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: liteGrey);
+       TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: grey);
   static TextStyle dimTextInputText =
       TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: liteGrey);
   static TextStyle taskAppNormalText =
