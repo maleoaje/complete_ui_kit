@@ -18,7 +18,7 @@ class _BottomNavBarTaskPlannerState extends State<BottomNavBarTaskPlanner> {
   List<Widget> widgets = [
     const HomePageTaskPlanner(),
     const HomePageTaskPlanner(),
-    TaskPlannerInbox(),
+    const TaskPlannerInbox(),
     const HomePageTaskPlanner(),
   ];
   @override
