@@ -17,8 +17,8 @@ class _HomePageBookmarkAppState extends State<HomePageBookmarkApp> {
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(20, 15, 20, 10),
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
+            decoration:  BoxDecoration(
+              borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(16),
                   bottomRight: Radius.circular(16)),
               color: blue,
@@ -38,7 +38,7 @@ class _HomePageBookmarkAppState extends State<HomePageBookmarkApp> {
                           Icons.notifications_outlined,
                           color: white,
                         ),
-                        const Positioned(
+                         Positioned(
                           top: 3,
                           right: 3,
                           child: CircleAvatar(
@@ -122,13 +122,13 @@ class _HomePageBookmarkAppState extends State<HomePageBookmarkApp> {
                       ),
                       const Spacer(),
                       Row(
-                        children: const [
+                        children:  [
                           Icon(
                             Icons.delete_outline,
                             color: blue,
                             size: 35,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 3,
                           ),
                           Icon(
@@ -136,7 +136,7 @@ class _HomePageBookmarkAppState extends State<HomePageBookmarkApp> {
                             color: blue,
                             size: 35,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 3,
                           ),
                           Icon(

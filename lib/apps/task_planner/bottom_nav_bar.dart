@@ -1,5 +1,7 @@
+import 'package:complete_ui_kit/apps/task_planner/calendar.dart';
 import 'package:complete_ui_kit/apps/task_planner/homepage_taskplanner.dart';
 import 'package:complete_ui_kit/apps/task_planner/taskplanner_Inbox.dart';
+import 'package:complete_ui_kit/apps/task_planner/taskplanner_settings.dart';
 import 'package:complete_ui_kit/config/constants.dart';
 
 import 'package:flutter/material.dart';
@@ -17,9 +19,9 @@ class _BottomNavBarTaskPlannerState extends State<BottomNavBarTaskPlanner> {
   int currentState = 0;
   List<Widget> widgets = [
     const HomePageTaskPlanner(),
-    const HomePageTaskPlanner(),
+    const CalendarTaskPlanner(),
     const TaskPlannerInbox(),
-    const HomePageTaskPlanner(),
+    const TaskPlannerSettings(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -135,7 +137,7 @@ class _BottomNavBarTaskPlannerState extends State<BottomNavBarTaskPlanner> {
                                 );
                               },
                               icon: Icon(
-                                LineIcons.clock,
+                                LineIcons.tools,
                                 size: 30,
                                 color: currentState == 3 ? taskAppBlue : grey,
                               ),

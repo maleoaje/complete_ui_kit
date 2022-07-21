@@ -13,6 +13,8 @@ class _HomePageTaskPlannerState extends State<HomePageTaskPlanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: white,
+      
+      body: const Center(child: Text('Main'),),
     );
   }
 }
